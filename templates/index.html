@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Spam Detector</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-2">
+        <p class="heading">SMS/EMAIL SPAM DETECTOR</p>
+        <form action="/Get-data" method="POST">
+          <div class="con-form">
+            <label for="message" class="label-heading">ENTER YOUR MESSAGE</label
+            ><br />
+            <input
+              type="text"
+              name="message"
+              id="message"
+              placeholder="Enter SMS or message..."
+            /><br />
+            <button>Submit</button>
+          </div>
+        </form>
+        <div class="result">{% if result %} {{ result }} {% endif %}</div>
+      </div>
+    </div>
+  </body>
+</html>
